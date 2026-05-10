@@ -8,6 +8,19 @@ package model;
  *
  * @author ncatjpeg
  */
-public class Filme {
+public class Filme extends Video{
+    private String duracao;
+
+    public Filme(String duracao, String titulo, String descricao, String genero) {
+        super(titulo, descricao, genero);
+        this.duracao = duracao;
+    }
+
+    public String getDuracao() {
+        return duracao;
+    }
+    public void setDuracao(String duracao) {
+        this.duracao = duracao;
+    }
     
 }

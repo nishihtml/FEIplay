@@ -8,6 +8,6 @@ package model;
  *
  * @author ncatjpeg
  */
-public interface Situação {
+public interface Situação{
     
 }

@@ -8,6 +8,26 @@ package model;
  *
  * @author ncatjpeg
  */
-public class Serie {
-    
+public class Serie extends Video{
+    private int episodios, temporadas;
+
+    public Serie(int episodios, int temporadas, String titulo, String descricao, String genero) {
+        super(titulo, descricao, genero);
+        this.episodios = episodios;
+        this.temporadas = temporadas;
+    }
+
+    public int getEpisodios() {
+        return episodios;
+    }
+    public void setEpisodios(int episodios) {
+        this.episodios = episodios;
+    }
+
+    public int getTemporadas() {
+        return temporadas;
+    }
+    public void setTemporadas(int temporadas) {
+        this.temporadas = temporadas;
+    }
 }

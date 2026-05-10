@@ -4,20 +4,80 @@
  */
 package view;
 
+import controller.ControleLogin;
+import java.awt.TextField;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
 /**
  *
  * @author ncatjpeg
  */
 public class Login extends javax.swing.JFrame {
-    
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Login.class.getName());
+    private ControleLogin c;
 
-    /**
-     * Creates new form Login
-     */
     public Login() {
         initComponents();
+        c = new ControleLogin(this);
     }
+
+    public JButton getBtn_cadastro() {
+        return btn_cadastro;
+    }
+
+    public void setBtn_cadastro(JButton btn_cadastro) {
+        this.btn_cadastro = btn_cadastro;
+    }
+
+    public JButton getBtn_logar() {
+        return btn_logar;
+    }
+
+    public void setBtn_logar(JButton btn_logar) {
+        this.btn_logar = btn_logar;
+    }
+
+    public JLabel getIbl_senha() {
+        return ibl_senha;
+    }
+
+    public void setIbl_senha(JLabel ibl_senha) {
+        this.ibl_senha = ibl_senha;
+    }
+
+    public JLabel getIbl_titulo() {
+        return ibl_titulo;
+    }
+
+    public void setIbl_titulo(JLabel ibl_titulo) {
+        this.ibl_titulo = ibl_titulo;
+    }
+
+    public JLabel getIbl_usuario() {
+        return ibl_usuario;
+    }
+
+    public void setIbl_usuario(JLabel ibl_usuario) {
+        this.ibl_usuario = ibl_usuario;
+    }
+
+    public TextField getTxt_senha() {
+        return txt_senha;
+    }
+
+    public void setTxt_senha(TextField txt_senha) {
+        this.txt_senha = txt_senha;
+    }
+
+    public TextField getTxt_usuario() {
+        return txt_usuario;
+    }
+
+    public void setTxt_usuario(TextField txt_usuario) {
+        this.txt_usuario = txt_usuario;
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,37 +88,39 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        textField1 = new java.awt.TextField();
-        jLabel3 = new javax.swing.JLabel();
-        textField2 = new java.awt.TextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        ibl_titulo = new javax.swing.JLabel();
+        ibl_usuario = new javax.swing.JLabel();
+        txt_usuario = new java.awt.TextField();
+        ibl_senha = new javax.swing.JLabel();
+        txt_senha = new java.awt.TextField();
+        btn_logar = new javax.swing.JButton();
+        btn_cadastro = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
-        jLabel1.setText("FEIplay");
+        ibl_titulo.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
+        ibl_titulo.setText("FEIplay");
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel2.setText("Usuário");
+        ibl_usuario.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        ibl_usuario.setText("Usuário");
 
-        textField1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        textField1.addActionListener(this::textField1ActionPerformed);
+        txt_usuario.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        txt_usuario.addActionListener(this::txt_usuarioActionPerformed);
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel3.setText("Senha");
+        ibl_senha.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        ibl_senha.setText("Senha");
 
-        textField2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        textField2.addActionListener(this::textField2ActionPerformed);
+        txt_senha.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        txt_senha.addActionListener(this::txt_senhaActionPerformed);
 
-        jButton1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jButton1.setText("Logar");
+        btn_logar.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        btn_logar.setText("Logar");
+        btn_logar.addActionListener(this::btn_logarActionPerformed);
 
-        jButton2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jButton2.setText("Cadastro");
+        btn_cadastro.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        btn_cadastro.setText("Cadastro");
+        btn_cadastro.addActionListener(this::btn_cadastroActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -67,88 +129,98 @@ public class Login extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(112, 112, 112)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2))
+                    .addComponent(ibl_senha)
+                    .addComponent(ibl_usuario))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_senha, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(89, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addComponent(ibl_titulo)
                         .addGap(254, 254, 254))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btn_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_logar, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(235, 235, 235))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(114, 114, 114)
-                .addComponent(jLabel1)
+                .addComponent(ibl_titulo)
                 .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ibl_usuario)
+                    .addComponent(txt_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ibl_senha)
+                    .addComponent(txt_senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(54, 54, 54)
-                .addComponent(jButton1)
+                .addComponent(btn_logar)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(btn_cadastro)
                 .addContainerGap(92, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void textField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField1ActionPerformed
+    private void txt_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_usuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textField1ActionPerformed
+    }//GEN-LAST:event_txt_usuarioActionPerformed
 
-    private void textField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField2ActionPerformed
+    private void txt_senhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_senhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textField2ActionPerformed
+    }//GEN-LAST:event_txt_senhaActionPerformed
+
+    private void btn_cadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cadastroActionPerformed
+        Cadastro cad = new Cadastro();
+        cad.setVisible(true);
+    }//GEN-LAST:event_btn_cadastroActionPerformed
+
+    private void btn_logarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_logarActionPerformed
+        // TODO add your handling code here:
+        c.logarUsuario();
+    }//GEN-LAST:event_btn_logarActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new Login().setVisible(true));
-    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
+//            logger.log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(() -> new Login().setVisible(true));
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private java.awt.TextField textField1;
-    private java.awt.TextField textField2;
+    private javax.swing.JButton btn_cadastro;
+    private javax.swing.JButton btn_logar;
+    private javax.swing.JLabel ibl_senha;
+    private javax.swing.JLabel ibl_titulo;
+    private javax.swing.JLabel ibl_usuario;
+    private java.awt.TextField txt_senha;
+    private java.awt.TextField txt_usuario;
     // End of variables declaration//GEN-END:variables
 }
