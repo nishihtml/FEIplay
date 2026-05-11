@@ -11,8 +11,8 @@ package model;
 public class Serie extends Video{
     private int episodios, temporadas;
 
-    public Serie(int episodios, int temporadas, String titulo, String descricao, String genero) {
-        super(titulo, descricao, genero);
+    public Serie(int episodios, int temporadas, String titulo, String descricao, String genero, String ano, String diretor) {
+        super(titulo, descricao, genero, ano, diretor);
         this.episodios = episodios;
         this.temporadas = temporadas;
     }

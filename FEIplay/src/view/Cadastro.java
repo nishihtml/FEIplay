@@ -4,20 +4,91 @@
  */
 package view;
 
+import controller.ControleCadastro;
+import java.awt.TextField;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
 /**
  *
  * @author ncatjpeg
  */
 public class Cadastro extends javax.swing.JFrame {
-    
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Cadastro.class.getName());
+    private ControleCadastro c;
 
     /**
      * Creates new form Login
      */
     public Cadastro() {
         initComponents();
+        c = new ControleCadastro(this);
     }
+
+    public JButton getBtn_cadastrar() {
+        return btn_cadastrar;
+    }
+
+    public void setBtn_cadastrar(JButton btn_cadastrar) {
+        this.btn_cadastrar = btn_cadastrar;
+    }
+
+    public JLabel getIbl_nome() {
+        return ibl_nome;
+    }
+
+    public void setIbl_nome(JLabel ibl_nome) {
+        this.ibl_nome = ibl_nome;
+    }
+
+    public JLabel getIbl_senha() {
+        return ibl_senha;
+    }
+
+    public void setIbl_senha(JLabel ibl_senha) {
+        this.ibl_senha = ibl_senha;
+    }
+
+    public JLabel getIbl_titulo() {
+        return ibl_titulo;
+    }
+
+    public void setIbl_titulo(JLabel ibl_titulo) {
+        this.ibl_titulo = ibl_titulo;
+    }
+
+    public JLabel getIbl_usuario() {
+        return ibl_usuario;
+    }
+
+    public void setIbl_usuario(JLabel ibl_usuario) {
+        this.ibl_usuario = ibl_usuario;
+    }
+
+    public TextField getTxt_nome() {
+        return txt_nome;
+    }
+
+    public void setTxt_nome(TextField txt_nome) {
+        this.txt_nome = txt_nome;
+    }
+
+    public TextField getTxt_senha() {
+        return txt_senha;
+    }
+
+    public void setTxt_senha(TextField txt_senha) {
+        this.txt_senha = txt_senha;
+    }
+
+    public TextField getTxt_usuario() {
+        return txt_usuario;
+    }
+
+    public void setTxt_usuario(TextField txt_usuario) {
+        this.txt_usuario = txt_usuario;
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -125,7 +196,7 @@ public class Cadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_usuarioActionPerformed
 
     private void btn_cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cadastrarActionPerformed
-        // TODO add your handling code here:
+        c.cadastrarUsuario();
     }//GEN-LAST:event_btn_cadastrarActionPerformed
 
     private void txt_senhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_senhaActionPerformed

@@ -9,12 +9,14 @@ package model;
  * @author ncatjpeg
  */
 public abstract class Video {
-    protected String titulo, descricao, genero;
+    protected String titulo, descricao, genero, ano, diretor;
 
-    public Video(String titulo, String descricao, String genero) {
+    public Video(String titulo, String descricao, String genero, String ano, String diretor) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.genero = genero;
+        this.ano = ano;
+        this.diretor = diretor;
     }
 
     public String getTitulo() {
@@ -37,6 +39,19 @@ public abstract class Video {
     public void setGenero(String genero) {
         this.genero = genero;
     }
-    
+
+    public String getAno() {
+        return ano;
+    }
+    public void setAno(String ano) {
+        this.ano = ano;
+    }
+
+    public String getDiretor() {
+        return diretor;
+    }
+    public void setDiretor(String diretor) {
+        this.diretor = diretor;
+    } 
     
 }
