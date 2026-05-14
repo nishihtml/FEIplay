@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import view.Index;
 
 public class ControleLogin{
     private Login tela1;
@@ -31,9 +32,9 @@ public class ControleLogin{
                 String n = res.getString("nome");
                 String u = res.getString("usuario");
                 String s = res.getString("senha");
-//                Logado tela2 = new Logado(new Usuario(n, u, s));
-//                tela2.setVisible(true);
-//                tela1.setVisible(false);
+                Index tela2 = new Index(new Usuario(n, u, s));
+                tela2.setVisible(true);
+                tela1.setVisible(false);
             } else{
                 JOptionPane.showMessageDialog(tela1, "Login não efetuado", "Erro", 
                                                 JOptionPane.ERROR_MESSAGE);

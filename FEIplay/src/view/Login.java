@@ -46,11 +46,11 @@ public class Login extends javax.swing.JFrame {
     }
 
     public JLabel getIbl_titulo() {
-        return ibl_titulo;
+        return lbl_titulo;
     }
 
     public void setIbl_titulo(JLabel ibl_titulo) {
-        this.ibl_titulo = ibl_titulo;
+        this.lbl_titulo = ibl_titulo;
     }
 
     public JLabel getIbl_usuario() {
@@ -88,7 +88,7 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ibl_titulo = new javax.swing.JLabel();
+        lbl_titulo = new javax.swing.JLabel();
         ibl_usuario = new javax.swing.JLabel();
         txt_usuario = new java.awt.TextField();
         ibl_senha = new javax.swing.JLabel();
@@ -99,8 +99,8 @@ public class Login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
 
-        ibl_titulo.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
-        ibl_titulo.setText("FEIplay");
+        lbl_titulo.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
+        lbl_titulo.setText("FEIplay");
 
         ibl_usuario.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         ibl_usuario.setText("Usuário");
@@ -140,7 +140,7 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(ibl_titulo)
+                        .addComponent(lbl_titulo)
                         .addGap(254, 254, 254))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -152,7 +152,7 @@ public class Login extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(114, 114, 114)
-                .addComponent(ibl_titulo)
+                .addComponent(lbl_titulo)
                 .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(ibl_usuario)
@@ -218,8 +218,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton btn_cadastro;
     private javax.swing.JButton btn_logar;
     private javax.swing.JLabel ibl_senha;
-    private javax.swing.JLabel ibl_titulo;
     private javax.swing.JLabel ibl_usuario;
+    private javax.swing.JLabel lbl_titulo;
     private java.awt.TextField txt_senha;
     private java.awt.TextField txt_usuario;
     // End of variables declaration//GEN-END:variables

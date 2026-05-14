@@ -4,19 +4,69 @@
  */
 package view;
 
+import controller.ControleIndex;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import model.Usuario;
+
 /**
  *
  * @author unifgnishi
  */
 public class Index extends javax.swing.JFrame {
-
+    private ControleIndex c;
     /**
      * Creates new form Index
+     * @param usuario
      */
-    public Index() {
+    public Index(Usuario usuario) {
+        lbl_nome.setText((usuario.getNome()));
         initComponents();
+        c = new ControleIndex(this, usuario);
     }
 
+    public JButton getBtn_buscar() {
+        return btn_buscar;
+    }
+
+    public void setBtn_buscar(JButton btn_buscar) {
+        this.btn_buscar = btn_buscar;
+    }
+
+    public JButton getBtn_criarPlaylist() {
+        return btn_criarPlaylist;
+    }
+
+    public void setBtn_criarPlaylist(JButton btn_criarPlaylist) {
+        this.btn_criarPlaylist = btn_criarPlaylist;
+    }
+
+    public JButton getBtn_verPlaylist() {
+        return btn_verPlaylist;
+    }
+
+    public void setBtn_verPlaylist(JButton btn_verPlaylist) {
+        this.btn_verPlaylist = btn_verPlaylist;
+    }
+
+    public JLabel getLbl_nome() {
+        return lbl_nome;
+    }
+
+    public void setLbl_nome(JLabel lbl_nome) {
+        this.lbl_nome = lbl_nome;
+    }
+
+    public JTextField getTxt_busca() {
+        return txt_busca;
+    }
+
+    public void setTxt_busca(JTextField txt_busca) {
+        this.txt_busca = txt_busca;
+    }
+
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,7 +76,7 @@ public class Index extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ibl_nome = new javax.swing.JLabel();
+        lbl_nome = new javax.swing.JLabel();
         btn_buscar = new javax.swing.JButton();
         txt_busca = new javax.swing.JTextField();
         btn_criarPlaylist = new javax.swing.JButton();
@@ -35,8 +85,8 @@ public class Index extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("FEIplay");
 
-        ibl_nome.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
-        ibl_nome.setText("{NOME}");
+        lbl_nome.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
+        lbl_nome.setText("{NOME}");
 
         btn_buscar.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
         btn_buscar.setText("Buscar");
@@ -67,7 +117,7 @@ public class Index extends javax.swing.JFrame {
                         .addComponent(btn_buscar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(328, 328, 328)
-                        .addComponent(ibl_nome))
+                        .addComponent(lbl_nome))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(304, 304, 304)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -79,7 +129,7 @@ public class Index extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(ibl_nome)
+                .addComponent(lbl_nome)
                 .addGap(111, 111, 111)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_buscar)
@@ -98,46 +148,46 @@ public class Index extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_buscaActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Index.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Index.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Index.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Index.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Index().setVisible(true);
-            }
-        });
-    }
+//    /**
+//     * @param args the command line arguments
+//     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(Index.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(Index.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(Index.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(Index.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new Index().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_buscar;
     private javax.swing.JButton btn_criarPlaylist;
     private javax.swing.JButton btn_verPlaylist;
-    private javax.swing.JLabel ibl_nome;
+    private javax.swing.JLabel lbl_nome;
     private javax.swing.JTextField txt_busca;
     // End of variables declaration//GEN-END:variables
 }

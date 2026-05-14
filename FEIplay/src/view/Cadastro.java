@@ -33,35 +33,35 @@ public class Cadastro extends javax.swing.JFrame {
     }
 
     public JLabel getIbl_nome() {
-        return ibl_nome;
+        return lbl_nome;
     }
 
     public void setIbl_nome(JLabel ibl_nome) {
-        this.ibl_nome = ibl_nome;
+        this.lbl_nome = ibl_nome;
     }
 
     public JLabel getIbl_senha() {
-        return ibl_senha;
+        return lbl_senha;
     }
 
     public void setIbl_senha(JLabel ibl_senha) {
-        this.ibl_senha = ibl_senha;
+        this.lbl_senha = ibl_senha;
     }
 
     public JLabel getIbl_titulo() {
-        return ibl_titulo;
+        return lbl_titulo;
     }
 
     public void setIbl_titulo(JLabel ibl_titulo) {
-        this.ibl_titulo = ibl_titulo;
+        this.lbl_titulo = ibl_titulo;
     }
 
     public JLabel getIbl_usuario() {
-        return ibl_usuario;
+        return lbl_usuario;
     }
 
     public void setIbl_usuario(JLabel ibl_usuario) {
-        this.ibl_usuario = ibl_usuario;
+        this.lbl_usuario = ibl_usuario;
     }
 
     public TextField getTxt_nome() {
@@ -99,29 +99,29 @@ public class Cadastro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ibl_titulo = new javax.swing.JLabel();
-        ibl_nome = new javax.swing.JLabel();
+        lbl_titulo = new javax.swing.JLabel();
+        lbl_nome = new javax.swing.JLabel();
         txt_nome = new java.awt.TextField();
-        ibl_usuario = new javax.swing.JLabel();
+        lbl_usuario = new javax.swing.JLabel();
         txt_usuario = new java.awt.TextField();
         btn_cadastrar = new javax.swing.JButton();
-        ibl_senha = new javax.swing.JLabel();
+        lbl_senha = new javax.swing.JLabel();
         txt_senha = new java.awt.TextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
 
-        ibl_titulo.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
-        ibl_titulo.setText("FEIplay");
+        lbl_titulo.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
+        lbl_titulo.setText("FEIplay");
 
-        ibl_nome.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        ibl_nome.setText("Nome");
+        lbl_nome.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lbl_nome.setText("Nome");
 
         txt_nome.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         txt_nome.addActionListener(this::txt_nomeActionPerformed);
 
-        ibl_usuario.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        ibl_usuario.setText("Usuário");
+        lbl_usuario.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lbl_usuario.setText("Usuário");
 
         txt_usuario.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         txt_usuario.addActionListener(this::txt_usuarioActionPerformed);
@@ -130,8 +130,8 @@ public class Cadastro extends javax.swing.JFrame {
         btn_cadastrar.setText("Cadastrar");
         btn_cadastrar.addActionListener(this::btn_cadastrarActionPerformed);
 
-        ibl_senha.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        ibl_senha.setText("Senha");
+        lbl_senha.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lbl_senha.setText("Senha");
 
         txt_senha.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         txt_senha.addActionListener(this::txt_senhaActionPerformed);
@@ -144,7 +144,7 @@ public class Cadastro extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(ibl_titulo)
+                        .addComponent(lbl_titulo)
                         .addGap(254, 254, 254))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btn_cadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -152,9 +152,9 @@ public class Cadastro extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(112, 112, 112)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(ibl_senha)
-                    .addComponent(ibl_usuario)
-                    .addComponent(ibl_nome))
+                    .addComponent(lbl_senha)
+                    .addComponent(lbl_usuario)
+                    .addComponent(lbl_nome))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txt_nome, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -166,18 +166,18 @@ public class Cadastro extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(114, 114, 114)
-                .addComponent(ibl_titulo)
+                .addComponent(lbl_titulo)
                 .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(ibl_nome)
+                    .addComponent(lbl_nome)
                     .addComponent(txt_nome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(ibl_usuario)
+                    .addComponent(lbl_usuario)
                     .addComponent(txt_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ibl_senha)
+                    .addComponent(lbl_senha)
                     .addComponent(txt_senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(56, 56, 56)
                 .addComponent(btn_cadastrar)
@@ -230,10 +230,10 @@ public class Cadastro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_cadastrar;
-    private javax.swing.JLabel ibl_nome;
-    private javax.swing.JLabel ibl_senha;
-    private javax.swing.JLabel ibl_titulo;
-    private javax.swing.JLabel ibl_usuario;
+    private javax.swing.JLabel lbl_nome;
+    private javax.swing.JLabel lbl_senha;
+    private javax.swing.JLabel lbl_titulo;
+    private javax.swing.JLabel lbl_usuario;
     private java.awt.TextField txt_nome;
     private java.awt.TextField txt_senha;
     private java.awt.TextField txt_usuario;

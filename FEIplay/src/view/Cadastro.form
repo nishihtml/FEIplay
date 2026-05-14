@@ -28,7 +28,7 @@
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="ibl_titulo" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_titulo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="254" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
@@ -40,9 +40,9 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="ibl_senha" min="-2" max="-2" attributes="0"/>
-                  <Component id="ibl_usuario" min="-2" max="-2" attributes="0"/>
-                  <Component id="ibl_nome" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbl_senha" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbl_usuario" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbl_nome" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -58,20 +58,20 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
-              <Component id="ibl_titulo" min="-2" max="-2" attributes="0"/>
+              <Component id="lbl_titulo" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="ibl_nome" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbl_nome" min="-2" max="-2" attributes="0"/>
                   <Component id="txt_nome" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="ibl_usuario" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbl_usuario" min="-2" max="-2" attributes="0"/>
                   <Component id="txt_usuario" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ibl_senha" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbl_senha" min="-2" max="-2" attributes="0"/>
                   <Component id="txt_senha" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
@@ -82,7 +82,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="ibl_titulo">
+    <Component class="javax.swing.JLabel" name="lbl_titulo">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="48" style="0"/>
@@ -90,7 +90,7 @@
         <Property name="text" type="java.lang.String" value="FEIplay"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="ibl_nome">
+    <Component class="javax.swing.JLabel" name="lbl_nome">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="24" style="0"/>
@@ -108,7 +108,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_nomeActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="ibl_usuario">
+    <Component class="javax.swing.JLabel" name="lbl_usuario">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="24" style="0"/>
@@ -137,7 +137,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_cadastrarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="ibl_senha">
+    <Component class="javax.swing.JLabel" name="lbl_senha">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="24" style="0"/>
