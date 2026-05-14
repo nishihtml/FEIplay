@@ -8,7 +8,7 @@ package model;
  *
  * @author ncatjpeg
  */
-public class Serie extends Video{
+public class Serie extends Video implements Situacao{
     private int episodios, temporadas;
 
     public Serie(int episodios, int temporadas, String titulo, String descricao, String genero, String ano, String diretor) {

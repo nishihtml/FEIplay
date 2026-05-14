@@ -29,6 +29,8 @@ public class Index extends javax.swing.JFrame {
         ibl_nome = new javax.swing.JLabel();
         btn_buscar = new javax.swing.JButton();
         txt_busca = new javax.swing.JTextField();
+        btn_criarPlaylist = new javax.swing.JButton();
+        btn_verPlaylist = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("FEIplay");
@@ -40,12 +42,17 @@ public class Index extends javax.swing.JFrame {
         btn_buscar.setText("Buscar");
 
         txt_busca.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        txt_busca.setText("jTextField1");
         txt_busca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_buscaActionPerformed(evt);
             }
         });
+
+        btn_criarPlaylist.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
+        btn_criarPlaylist.setText("Criar Playlist");
+
+        btn_verPlaylist.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
+        btn_verPlaylist.setText("Ver Playlist");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -56,12 +63,17 @@ public class Index extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(71, 71, 71)
                         .addComponent(txt_busca, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(btn_buscar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(328, 328, 328)
-                        .addComponent(ibl_nome)))
-                .addContainerGap(100, Short.MAX_VALUE))
+                        .addComponent(ibl_nome))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(304, 304, 304)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btn_criarPlaylist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_verPlaylist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -72,7 +84,11 @@ public class Index extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_buscar)
                     .addComponent(txt_busca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(466, Short.MAX_VALUE))
+                .addGap(102, 102, 102)
+                .addComponent(btn_criarPlaylist)
+                .addGap(18, 18, 18)
+                .addComponent(btn_verPlaylist)
+                .addContainerGap(161, Short.MAX_VALUE))
         );
 
         pack();
@@ -119,6 +135,8 @@ public class Index extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_buscar;
+    private javax.swing.JButton btn_criarPlaylist;
+    private javax.swing.JButton btn_verPlaylist;
     private javax.swing.JLabel ibl_nome;
     private javax.swing.JTextField txt_busca;
     // End of variables declaration//GEN-END:variables
