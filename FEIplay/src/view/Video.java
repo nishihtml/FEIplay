@@ -28,42 +28,46 @@ public class Video extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        lbl_nome = new javax.swing.JLabel();
+        lbl_ano = new javax.swing.JLabel();
+        lbl_diretor = new javax.swing.JLabel();
+        lbl_genero = new javax.swing.JLabel();
+        lbl_descricao = new javax.swing.JLabel();
+        lbl_info1 = new javax.swing.JLabel();
+        lbl_2 = new javax.swing.JLabel();
+        lbl_info3 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Video");
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel1.setText("Nome: ");
+        lbl_nome.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lbl_nome.setText("Nome: ");
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel2.setText("Ano: ");
+        lbl_ano.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lbl_ano.setText("Ano: ");
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel3.setText("Diretor: ");
+        lbl_diretor.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lbl_diretor.setText("Diretor: ");
 
-        jLabel4.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel4.setText("Gênero: ");
+        lbl_genero.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lbl_genero.setText("Gênero: ");
 
-        jLabel5.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel5.setText("Descrição:");
-        jLabel5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        lbl_descricao.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lbl_descricao.setText("Descrição:");
+        lbl_descricao.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel6.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel6.setText("Info 1:");
+        lbl_info1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lbl_info1.setText("Info 1:");
 
-        jLabel7.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel7.setText("Info 2:");
+        lbl_2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lbl_2.setText("Info 2:");
 
-        jLabel8.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel8.setText("Info 3:");
+        lbl_info3.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lbl_info3.setText("Info 3:");
+
+        jButton1.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
+        jButton1.setText("Playlist");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,43 +77,51 @@ public class Video extends javax.swing.JFrame {
                 .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 30, Short.MAX_VALUE))
+                            .addComponent(lbl_genero, javax.swing.GroupLayout.DEFAULT_SIZE, 767, Short.MAX_VALUE)
+                            .addComponent(lbl_diretor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lbl_ano, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lbl_nome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 767, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(lbl_descricao, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lbl_2, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                                    .addComponent(lbl_info1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lbl_info3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
+                                .addComponent(jButton1)
+                                .addGap(133, 133, 133))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(41, 41, 41)
-                .addComponent(jLabel1)
+                .addComponent(lbl_nome)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
+                .addComponent(lbl_ano)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3)
+                .addComponent(lbl_diretor)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel4)
+                .addComponent(lbl_genero)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lbl_descricao, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(37, 37, 37)
-                        .addComponent(jLabel6)
+                        .addComponent(lbl_info1)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel7)
+                        .addComponent(lbl_2)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel8)))
+                        .addComponent(lbl_info3)
+                        .addGap(113, 113, 113)
+                        .addComponent(jButton1)))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
@@ -142,13 +154,14 @@ public class Video extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel lbl_2;
+    private javax.swing.JLabel lbl_ano;
+    private javax.swing.JLabel lbl_descricao;
+    private javax.swing.JLabel lbl_diretor;
+    private javax.swing.JLabel lbl_genero;
+    private javax.swing.JLabel lbl_info1;
+    private javax.swing.JLabel lbl_info3;
+    private javax.swing.JLabel lbl_nome;
     // End of variables declaration//GEN-END:variables
 }

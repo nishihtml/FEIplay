@@ -40,21 +40,21 @@ public class UsuarioDAO {
         statement.execute();
         conn.close();
     }
-
-    public void atualizar(Usuario usuario) throws SQLException{
-        String sql = "update usuarios set senha =  ? where usuario = ?";
-        PreparedStatement statement = conn.prepareStatement(sql);
-        statement.setString(1, usuario.getSenha());
-        statement.setString(2, usuario.getUsuario());
-        statement.execute();
-        conn.close();
-    }
-    
-    public void remover(Usuario usuario) throws SQLException{
-        String sql = "delete from usuarios where usuario = ?";
-        PreparedStatement statement = conn.prepareStatement(sql);
-        statement.setString(1, usuario.getUsuario());
-        statement.execute();
-        conn.close();
-    }
+//
+//    public void atualizar(Usuario usuario) throws SQLException{
+//        String sql = "update usuarios set senha =  ? where usuario = ?";
+//        PreparedStatement statement = conn.prepareStatement(sql);
+//        statement.setString(1, usuario.getSenha());
+//        statement.setString(2, usuario.getUsuario());
+//        statement.execute();
+//        conn.close();
+//    }
+//    
+//    public void remover(Usuario usuario) throws SQLException{
+//        String sql = "delete from usuarios where usuario = ?";
+//        PreparedStatement statement = conn.prepareStatement(sql);
+//        statement.setString(1, usuario.getUsuario());
+//        statement.execute();
+//        conn.close();
+//    }
 }
