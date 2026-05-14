@@ -21,8 +21,8 @@ public class Index extends javax.swing.JFrame {
      * @param usuario
      */
     public Index(Usuario usuario) {
-        lbl_nome.setText((usuario.getNome()));
         initComponents();
+        lbl_nome.setText((usuario.getNome()));
         c = new ControleIndex(this, usuario);
     }
 
