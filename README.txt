@@ -25,7 +25,7 @@ Tabela videos:
 -diretor
 -genero
 -tipo            //se tipo == “1”, é considerada como Filme; se tipo = “2”, é considerada como Serie
--duracao         // exclusivo para tipo 1
+-duracao         //exclusivo para tipo 1
 -episodios       //exclusivo para tipo 2
 -temporadas      //exclusivo para tipo 2
 -situacao        //exclusivo para tipo 2
