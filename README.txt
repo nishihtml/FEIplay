@@ -29,6 +29,7 @@ Tabela videos:
 -episodios       //exclusivo para tipo 2
 -temporadas      //exclusivo para tipo 2
 -situacao        //exclusivo para tipo 2
+                 //variáveis que tem proposito exclusivo é do tipo não nulo
 
 Eu inicialmente queria separar a tabela em dois mas não sabia como fazer isso ou utilizar a FOREIGN KEY no banco de dados, logo optei fazer com que a tabela videos compartilha os atributos da classe Filme e da classe Serie, tambem implementei o atributo tipo para diferencia entre Filme e Serie. A um certo ponto, eu queria implementar uma descricao para videos mas seria muito complicado para eu colocar todo texto em um só lugar. 
 
