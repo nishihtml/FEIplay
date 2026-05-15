@@ -50,9 +50,5 @@ public class VideoDAO {
 //        PreparedStatement statement = conn.prepareStatement(sql);
 //        statement.execute();
 //        conn.close();
-//    }
-
-    public ResultSet consultar(Filme filme) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+//    } 
 }

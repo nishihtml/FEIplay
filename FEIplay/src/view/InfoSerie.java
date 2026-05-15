@@ -6,7 +6,6 @@ package view;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import model.Filme;
 import model.Serie;
 
 /**
@@ -14,8 +13,10 @@ import model.Serie;
  * @author ncatjpeg
  */
 public class InfoSerie extends javax.swing.JFrame {
+    public String s;
     /**
      * Creates new form Video
+     * @param serie
      */
     public InfoSerie(Serie serie) {
         initComponents();
@@ -25,7 +26,7 @@ public class InfoSerie extends javax.swing.JFrame {
         lbl_genero.setText((serie.getGenero()));
         lbl_episodios.setText((serie.getEpisodios()));
         lbl_temporadas.setText((serie.getTemporadas()));
-        lbl_situacao.setText((serie.getSituacao()));
+        lbl_situacao.setText((serie.exibirSituacao(serie.getSituacao())));
     }
 
     public JButton getjButton1() {

@@ -16,11 +16,9 @@ import view.InfoSerie;
 
 public class ControleIndex {
     private Index tela4;
-    private Usuario usuario;
     
-    public ControleIndex(Index tela4, Usuario usuario){
+    public ControleIndex(Index tela4){
         this.tela4 = tela4;
-        this.usuario = usuario;
     }
     
     public void BuscarFilme(){
@@ -36,7 +34,7 @@ public class ControleIndex {
                 String ano = res.getString("ano");
                 String diretor = res.getString("diretor");
                 String genero = res.getString("genero");
-                InfoFilme tela5 = new InfoFilme(new Filme(duracao, titulo, ano, diretor, genero));
+                InfoFilme tela5 = new InfoFilme(new Filme(duracao, titulo, genero, ano, diretor));
                 tela5.setVisible(true);
             }else{
                 JOptionPane.showMessageDialog(tela4, "Filme não encontrado", 
@@ -50,7 +48,7 @@ public class ControleIndex {
     }
     
     public void BuscarSerie(){
-        Serie serie = new Serie(null, tela4.getTxt_busca().getText(), null, null, null, null, null);
+        Serie serie = new Serie(null, null, null, tela4.getTxt_busca().getText(), null, null, null);
         Conexao conexao = new Conexao();
         try{
             Connection conn = conexao.getConnection();
@@ -64,7 +62,7 @@ public class ControleIndex {
                 String ano = res.getString("ano");
                 String diretor = res.getString("diretor");
                 String genero = res.getString("genero");
-                InfoSerie tela6 = new InfoSerie(new Serie(episodios, temporadas, situacao, titulo, ano, diretor, genero));
+                InfoSerie tela6 = new InfoSerie(new Serie(episodios, temporadas, situacao, titulo, genero, ano, diretor));
                 tela6.setVisible(true);
             }else{
                 JOptionPane.showMessageDialog(tela4, "Serie não encontrada", 

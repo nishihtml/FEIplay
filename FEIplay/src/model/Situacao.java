@@ -9,5 +9,5 @@ package model;
  * @author ncatjpeg
  */
 public interface Situacao{
-    
+    String exibirSituacao(String situacao);
 }

@@ -40,5 +40,5 @@ public class Playlist{
         this.serie = serie;
     }
     
-     
+    
 }

@@ -11,7 +11,7 @@ package model;
 public class Serie extends Video implements Situacao{
     private String episodios, temporadas, situacao;
 
-    public Serie(String episodios, String temporadas, String titulo, String genero, String ano, String diretor, String situacao) {
+    public Serie(String episodios, String temporadas, String situacao, String titulo, String genero, String ano, String diretor) {
         super(titulo, genero, ano, diretor);
         this.episodios = episodios;
         this.temporadas = temporadas;
@@ -39,5 +39,15 @@ public class Serie extends Video implements Situacao{
         this.situacao = situacao;
     }
     
-    
+    @Override
+    public String exibirSituacao(String s){
+        switch (s) {
+            case "Encerrado":
+                return "A série está encerrada";
+            case "Em produção":
+                return "A série está em fase de produção";
+            default:
+                return "A série foi cancelada";
+        }
+    }
 }
