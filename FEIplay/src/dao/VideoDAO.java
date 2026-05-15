@@ -12,10 +12,6 @@ import model.Filme;
 import model.Serie;
 
 
-/**
- *
- * @author ncatjpeg
- */
 public class VideoDAO {
     private Connection conn;
     
