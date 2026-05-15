@@ -40,6 +40,8 @@ public class Serie extends Video implements Situacao{
         this.situacao = situacao;
     }
     
+    
+    
     @Override
     public String exibirSituacao(String s){
         switch (s) {

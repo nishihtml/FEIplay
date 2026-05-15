@@ -19,7 +19,8 @@ public class ControleLogin{
     }
     
      public void logarUsuario(){
-        Usuario usuario = new Usuario(null,tela1.getTxt_usuario().getText(),tela1.getTxt_senha().getText());
+        Usuario usuario = new Usuario(null,tela1.getTxt_usuario().getText(),
+                                        tela1.getTxt_senha().getText());
         Conexao conexao = new Conexao();
         try{
             Connection conn = conexao.getConnection();

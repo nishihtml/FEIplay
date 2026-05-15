@@ -1,7 +1,6 @@
 package view;
 
 import controller.ControleInfoSerie;
-import javax.swing.JButton;
 import javax.swing.JLabel;
 import model.Serie;
 
@@ -15,23 +14,34 @@ public class InfoSerie extends javax.swing.JFrame {
      */
     public InfoSerie(Serie serie) {
         initComponents();
-        lbl_titulo.setText((serie.getTitulo()));
-        lbl_ano.setText((serie.getAno()));
-        lbl_diretor.setText((serie.getDiretor()));
-        lbl_genero.setText((serie.getGenero()));
-        lbl_episodios.setText((serie.getEpisodios()));
-        lbl_temporadas.setText((serie.getTemporadas()));
-        lbl_situacao.setText((serie.exibirSituacao(serie.getSituacao())));
-        c = new ControleInfoSerie(this);
+        lbl_titulo.setText(("Titulo: " + serie.getTitulo()));
+        lbl_ano.setText(("Ano de lançamento: " + serie.getAno()));
+        lbl_diretor.setText(("Diretor: " + serie.getDiretor()));
+        lbl_genero.setText(("Genero: " + serie.getGenero()));
+        if(serie.getCurtida().equals("1")){
+            lbl_curtida.setText(("♡"));
+        }else{
+            lbl_curtida.setText((" "));
+        }
+        lbl_episodios.setText(("Episodios: " +serie.getEpisodios()));
+        lbl_temporadas.setText(("Temporadas: " + serie.getTemporadas()));
+        lbl_situacao.setText(("Situação: " + serie.exibirSituacao(serie.getSituacao())));
+        c = new ControleInfoSerie(this, serie);
     }
 
-    public JButton getjButton1() {
-        return btn_playlist;
+   
+
+    public JLabel getLbl_curtida() {
+        return lbl_curtida;
     }
 
-    public void setjButton1(JButton jButton1) {
-        this.btn_playlist = jButton1;
+    public void setLbl_curtida(JLabel lbl_curtida) {
+        this.lbl_curtida = lbl_curtida;
     }
+    
+    
+
+    
 
     public JLabel getLbl_ano() {
         return lbl_ano;
@@ -115,12 +125,11 @@ public class InfoSerie extends javax.swing.JFrame {
         lbl_diretor = new javax.swing.JLabel();
         lbl_genero = new javax.swing.JLabel();
         lbl_episodios = new javax.swing.JLabel();
-        btn_playlist = new javax.swing.JButton();
         lbl_temporadas = new javax.swing.JLabel();
         lbl_situacao = new javax.swing.JLabel();
-        btn_fechar = new javax.swing.JButton();
+        lbl_curtida = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Video");
 
         lbl_titulo.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
@@ -138,40 +147,31 @@ public class InfoSerie extends javax.swing.JFrame {
         lbl_episodios.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         lbl_episodios.setText("Episodios:");
 
-        btn_playlist.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
-        btn_playlist.setText("Playlist");
-
         lbl_temporadas.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         lbl_temporadas.setText("Temporadas:");
 
         lbl_situacao.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         lbl_situacao.setText("Situação:");
 
-        btn_fechar.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
-        btn_fechar.setText("Fechar");
-        btn_fechar.addActionListener(this::btn_fecharActionPerformed);
+        lbl_curtida.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
+        lbl_curtida.setText("♡");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lbl_genero, javax.swing.GroupLayout.DEFAULT_SIZE, 767, Short.MAX_VALUE)
-                            .addComponent(lbl_diretor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbl_ano, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbl_titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbl_episodios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbl_temporadas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbl_situacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(339, 339, 339)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btn_playlist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btn_fechar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(lbl_curtida)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(lbl_genero, javax.swing.GroupLayout.DEFAULT_SIZE, 767, Short.MAX_VALUE)
+                        .addComponent(lbl_diretor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbl_ano, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbl_titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbl_episodios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbl_temporadas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbl_situacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(80, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -191,20 +191,13 @@ public class InfoSerie extends javax.swing.JFrame {
                 .addComponent(lbl_temporadas)
                 .addGap(18, 18, 18)
                 .addComponent(lbl_situacao)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addComponent(btn_playlist)
-                .addGap(18, 18, 18)
-                .addComponent(btn_fechar)
-                .addGap(30, 30, 30))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbl_curtida)
+                .addGap(172, 172, 172))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btn_fecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_fecharActionPerformed
-        // TODO add your handling code here:
-        c.fechar();
-    }//GEN-LAST:event_btn_fecharActionPerformed
 //
 //    /**
 //     * @param args the command line arguments
@@ -232,9 +225,8 @@ public class InfoSerie extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_fechar;
-    private javax.swing.JButton btn_playlist;
     private javax.swing.JLabel lbl_ano;
+    private javax.swing.JLabel lbl_curtida;
     private javax.swing.JLabel lbl_diretor;
     private javax.swing.JLabel lbl_episodios;
     private javax.swing.JLabel lbl_genero;

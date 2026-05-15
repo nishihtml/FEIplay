@@ -38,6 +38,32 @@ public class VideoDAO {
         ResultSet resultado = statement.getResultSet();
         return resultado;
     }
+    
+    public void alterarFilme(Filme filme) throws SQLException{
+        String sql = "update videos set curtida =  ? where titulo = ?";
+        PreparedStatement statement = conn.prepareStatement(sql);
+        statement.setString(2, filme.getTitulo());
+        if(filme.getCurtida().equals("1")){
+            statement.setString(1, "0");
+        }else{
+            statement.setString(1, "1");
+        }
+        statement.execute();
+        conn.close();
+    }
+    
+    public void alterarSerie(Serie serie) throws SQLException{
+        String sql = "update videos set curtida =  ? where titulo = ?";
+        PreparedStatement statement = conn.prepareStatement(sql);
+        statement.setString(2, serie.getTitulo());
+        if(serie.getCurtida().equals("1")){
+            statement.setString(1, "0");
+        }else{
+            statement.setString(1, "1");
+        }
+        statement.execute();
+        conn.close();
+    }
 //    public void inserir(Usuario usuario) throws SQLException{
 //        String sql = "insert into usuarios (nome, usuario, senha) values ('"
 //                      + usuario.getNome()    + "', '" 
