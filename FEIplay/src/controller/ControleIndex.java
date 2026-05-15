@@ -3,6 +3,7 @@ package controller;
 
 import java.sql.Connection;
 import dao.Conexao;
+import dao.PlaylistDAO;
 import dao.VideoDAO;
 import model.Filme;
 import model.Serie;
@@ -11,6 +12,7 @@ import view.Index;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import model.Playlist;
 import view.InfoFilme;
 import view.InfoSerie;
 
@@ -73,6 +75,25 @@ public class ControleIndex {
                                                     JOptionPane.ERROR_MESSAGE);
         }
         
+        
+    }
+    
+    public void criarPlaylist(){
+        Usuario user;
+        String n = tela4.getTxt_playlist().getText();
+        
+        Playlist playlist = new Playlist(n, null, null, null);
+        Conexao conexao = new Conexao();
+        try {
+            Connection conn = conexao.getConnection();
+            PlaylistDAO dao = new PlaylistDAO(conn);
+            dao.inserirPlaylist(playlist);
+            JOptionPane.showMessageDialog(tela4, "Playlist criado!","Aviso", 
+                                        JOptionPane.INFORMATION_MESSAGE);
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(tela4, "Playlist não foi criado!","Erro", 
+                                        JOptionPane.ERROR_MESSAGE);
+        }
     }
     
 //        Aluno aluno = new Aluno(null,tela1.getTxtUsuario().getText(),tela1.getTxtSenha().getText());

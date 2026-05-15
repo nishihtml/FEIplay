@@ -4,6 +4,7 @@
  */
 package view;
 
+import controller.ControleInfoSerie;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import model.Serie;
@@ -13,7 +14,8 @@ import model.Serie;
  * @author ncatjpeg
  */
 public class InfoSerie extends javax.swing.JFrame {
-    public String s;
+    private ControleInfoSerie c;
+    
     /**
      * Creates new form Video
      * @param serie
@@ -27,6 +29,7 @@ public class InfoSerie extends javax.swing.JFrame {
         lbl_episodios.setText((serie.getEpisodios()));
         lbl_temporadas.setText((serie.getTemporadas()));
         lbl_situacao.setText((serie.exibirSituacao(serie.getSituacao())));
+        c = new ControleInfoSerie(this);
     }
 
     public JButton getjButton1() {
@@ -161,6 +164,7 @@ public class InfoSerie extends javax.swing.JFrame {
 
         btn_fechar.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
         btn_fechar.setText("Fechar");
+        btn_fechar.addActionListener(this::btn_fecharActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -211,6 +215,11 @@ public class InfoSerie extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_fecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_fecharActionPerformed
+        // TODO add your handling code here:
+        c.fechar();
+    }//GEN-LAST:event_btn_fecharActionPerformed
 //
 //    /**
 //     * @param args the command line arguments

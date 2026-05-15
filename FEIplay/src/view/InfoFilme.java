@@ -4,6 +4,7 @@
  */
 package view;
 
+import controller.ControleInfoFilme;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import model.Filme;
@@ -13,6 +14,7 @@ import model.Filme;
  * @author ncatjpeg
  */
 public class InfoFilme extends javax.swing.JFrame {
+    private ControleInfoFilme c;
     /**
      * Creates new form Video
      */
@@ -23,6 +25,7 @@ public class InfoFilme extends javax.swing.JFrame {
         lbl_diretor.setText((filme.getDiretor()));
         lbl_genero.setText((filme.getGenero()));
         lbl_duracao.setText((filme.getDuracao()));
+        c = new ControleInfoFilme(this);
     }
 
     public JButton getjButton1() {
@@ -115,6 +118,7 @@ public class InfoFilme extends javax.swing.JFrame {
 
         btn_fechar.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
         btn_fechar.setText("Fechar");
+        btn_fechar.addActionListener(this::btn_fecharActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -159,6 +163,11 @@ public class InfoFilme extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_fecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_fecharActionPerformed
+        // TODO add your handling code here:
+        c.fechar();
+    }//GEN-LAST:event_btn_fecharActionPerformed
 //
 //    /**
 //     * @param args the command line arguments

@@ -19,7 +19,7 @@ public class ControleCadastro {
         String n = tela3.getTxt_nome().getText();
         String u = tela3.getTxt_usuario().getText();
         String s = tela3.getTxt_senha().getText();
-        Usuario usuario = new Usuario(n, u,s);
+        Usuario usuario = new Usuario(n, u, s);
         
         Conexao conexao = new Conexao();
         try {

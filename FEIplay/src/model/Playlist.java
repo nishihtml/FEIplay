@@ -9,14 +9,23 @@ package model;
  * @author ncatjpeg
  */
 public class Playlist{
+    private String nome;
     private Usuario usuario;
     private Filme filme;
     private Serie serie;
 
-    public Playlist(Usuario usuario, Filme filme, Serie serie) {
+    public Playlist(String nome, Usuario usuario, Filme filme, Serie serie) {
+        this.nome = nome;
         this.usuario = usuario;
         this.filme = filme;
         this.serie = serie;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public Usuario getUsuario() {

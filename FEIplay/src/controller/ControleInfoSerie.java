@@ -4,22 +4,20 @@
  */
 package controller;
 
-import view.InfoFilme;
+import view.InfoSerie;
 
 /**
  *
  * @author ncatjpeg
  */
-public class ControleInfoFilme {
-    private InfoFilme tela5;
+public class ControleInfoSerie {
+    private InfoSerie tela6;
     
-    public ControleInfoFilme(InfoFilme tela5){
-        this.tela5 = tela5;
+    public ControleInfoSerie(InfoSerie tela5){
+        this.tela6 = tela6;
     }
     
     public void fechar(){
-        tela5.setVisible(false);
+        tela6.setVisible(false);
     }
-    
-    
 }
