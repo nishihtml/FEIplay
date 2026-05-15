@@ -15,8 +15,54 @@ public class InfoFilme extends javax.swing.JFrame {
         lbl_ano.setText((filme.getAno()));
         lbl_diretor.setText((filme.getDiretor()));
         lbl_genero.setText((filme.getGenero()));
+        if(filme.getCurtida().equals("1")){
+            lbl_curtida.setText(("♡"));
+        }else{
+            lbl_curtida.setText((" "));
+        }
         lbl_duracao.setText((filme.getDuracao()));
         c = new ControleInfoFilme(this);
+    }
+    
+    
+    public JButton getBtn_fechar() {
+        return btn_fechar;
+    }
+
+    public void setBtn_fechar(JButton btn_fechar) {
+        this.btn_fechar = btn_fechar;
+    }
+
+    public JButton getBtn_playlist() {
+        return btn_playlist;
+    }
+
+    public void setBtn_playlist(JButton btn_playlist) {
+        this.btn_playlist = btn_playlist;
+    }
+
+    public JLabel getLbl_curtida() {
+        return lbl_curtida;
+    }
+
+    public void setLbl_curtida(JLabel lbl_curtida) {
+        this.lbl_curtida = lbl_curtida;
+    }
+
+    public JLabel getLbl_duracao() {
+        return lbl_duracao;
+    }
+
+    public void setLbl_duracao(JLabel lbl_duracao) {
+        this.lbl_duracao = lbl_duracao;
+    }
+
+    public JLabel getLbl_titulo() {
+        return lbl_titulo;
+    }
+
+    public void setLbl_titulo(JLabel lbl_titulo) {
+        this.lbl_titulo = lbl_titulo;
     }
 
     public JButton getjButton1() {
@@ -77,6 +123,7 @@ public class InfoFilme extends javax.swing.JFrame {
         lbl_genero = new javax.swing.JLabel();
         lbl_duracao = new javax.swing.JLabel();
         btn_playlist = new javax.swing.JButton();
+        lbl_curtida = new javax.swing.JLabel();
         btn_fechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -100,9 +147,12 @@ public class InfoFilme extends javax.swing.JFrame {
         btn_playlist.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
         btn_playlist.setText("Playlist");
 
+        lbl_curtida.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
+        lbl_curtida.setText("♡");
+
         btn_fechar.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
         btn_fechar.setText("Fechar");
-        btn_fechar.addActionListener(this::btn_fecharActionPerformed);
+        btn_fechar.addActionListener();
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -112,23 +162,25 @@ public class InfoFilme extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(45, 45, 45)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lbl_genero, javax.swing.GroupLayout.DEFAULT_SIZE, 767, Short.MAX_VALUE)
-                            .addComponent(lbl_diretor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbl_ano, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbl_titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbl_duracao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_curtida)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(lbl_genero, javax.swing.GroupLayout.DEFAULT_SIZE, 767, Short.MAX_VALUE)
+                                .addComponent(lbl_diretor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbl_ano, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbl_titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbl_duracao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(339, 339, 339)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btn_playlist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btn_fechar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn_fechar, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_playlist, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(80, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
+                .addGap(73, 73, 73)
                 .addComponent(lbl_titulo)
                 .addGap(18, 18, 18)
                 .addComponent(lbl_ano)
@@ -138,7 +190,9 @@ public class InfoFilme extends javax.swing.JFrame {
                 .addComponent(lbl_genero)
                 .addGap(18, 18, 18)
                 .addComponent(lbl_duracao)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(lbl_curtida)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(btn_playlist)
                 .addGap(18, 18, 18)
                 .addComponent(btn_fechar)
@@ -149,7 +203,7 @@ public class InfoFilme extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_fecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_fecharActionPerformed
-
+        // TODO add your handling code here:
         c.fechar();
     }//GEN-LAST:event_btn_fecharActionPerformed
 //
@@ -182,6 +236,7 @@ public class InfoFilme extends javax.swing.JFrame {
     private javax.swing.JButton btn_fechar;
     private javax.swing.JButton btn_playlist;
     private javax.swing.JLabel lbl_ano;
+    private javax.swing.JLabel lbl_curtida;
     private javax.swing.JLabel lbl_diretor;
     private javax.swing.JLabel lbl_duracao;
     private javax.swing.JLabel lbl_genero;

@@ -7,7 +7,6 @@ import dao.PlaylistDAO;
 import dao.VideoDAO;
 import model.Filme;
 import model.Serie;
-import model.Usuario;
 import view.Index;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -24,7 +23,8 @@ public class ControleIndex {
     }
     
     public void BuscarFilme(){
-        Filme filme = new Filme(null, tela4.getTxt_busca().getText(), null, null, null);
+        Filme filme = new Filme(null, tela4.getTxt_busca().getText(),
+                                null, null, null, null);
         Conexao conexao = new Conexao();
         try{
             Connection conn = conexao.getConnection();
@@ -36,7 +36,9 @@ public class ControleIndex {
                 String ano = res.getString("ano");
                 String diretor = res.getString("diretor");
                 String genero = res.getString("genero");
-                InfoFilme tela5 = new InfoFilme(new Filme(duracao, titulo, genero, ano, diretor));
+                String curtida = res.getString("curtida");
+                InfoFilme tela5 = new InfoFilme(new Filme(duracao, titulo, 
+                                            genero, ano, diretor, curtida));
                 tela5.setVisible(true);
             }else{
                 JOptionPane.showMessageDialog(tela4, "Filme não encontrado", 
@@ -50,7 +52,8 @@ public class ControleIndex {
     }
     
     public void BuscarSerie(){
-        Serie serie = new Serie(null, null, null, tela4.getTxt_busca().getText(), null, null, null);
+        Serie serie = new Serie(null, null, null,
+                tela4.getTxt_busca().getText(), null, null, null, null);
         Conexao conexao = new Conexao();
         try{
             Connection conn = conexao.getConnection();
@@ -64,7 +67,9 @@ public class ControleIndex {
                 String ano = res.getString("ano");
                 String diretor = res.getString("diretor");
                 String genero = res.getString("genero");
-                InfoSerie tela6 = new InfoSerie(new Serie(episodios, temporadas, situacao, titulo, genero, ano, diretor));
+                String curtida = res.getString("curtida");
+                InfoSerie tela6 = new InfoSerie(new Serie(episodios, temporadas,
+                              situacao, titulo, genero, ano, diretor, curtida));
                 tela6.setVisible(true);
             }else{
                 JOptionPane.showMessageDialog(tela4, "Serie não encontrada", 
