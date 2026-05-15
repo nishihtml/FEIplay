@@ -8,14 +8,14 @@ package view;
  *
  * @author ncatjpeg
  */
-public class Video extends javax.swing.JFrame {
+public class InfoVideo extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Video.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(InfoVideo.class.getName());
 
     /**
      * Creates new form Video
      */
-    public Video() {
+    public InfoVideo() {
         initComponents();
     }
 
@@ -32,7 +32,6 @@ public class Video extends javax.swing.JFrame {
         lbl_ano = new javax.swing.JLabel();
         lbl_diretor = new javax.swing.JLabel();
         lbl_genero = new javax.swing.JLabel();
-        lbl_descricao = new javax.swing.JLabel();
         lbl_info1 = new javax.swing.JLabel();
         lbl_2 = new javax.swing.JLabel();
         lbl_info3 = new javax.swing.JLabel();
@@ -53,10 +52,6 @@ public class Video extends javax.swing.JFrame {
         lbl_genero.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         lbl_genero.setText("Gênero: ");
 
-        lbl_descricao.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        lbl_descricao.setText("Descrição:");
-        lbl_descricao.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-
         lbl_info1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         lbl_info1.setText("Info 1:");
 
@@ -74,29 +69,22 @@ public class Video extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lbl_genero, javax.swing.GroupLayout.DEFAULT_SIZE, 767, Short.MAX_VALUE)
-                            .addComponent(lbl_diretor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbl_ano, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbl_nome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbl_descricao, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(lbl_2, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
-                                    .addComponent(lbl_info1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lbl_info3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
-                                .addComponent(jButton1)
-                                .addGap(133, 133, 133))))))
+                            .addComponent(lbl_info3, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(lbl_genero, javax.swing.GroupLayout.DEFAULT_SIZE, 767, Short.MAX_VALUE)
+                                .addComponent(lbl_diretor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbl_ano, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbl_nome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbl_info1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbl_2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(348, 348, 348)
+                        .addComponent(jButton1)))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,20 +97,15 @@ public class Video extends javax.swing.JFrame {
                 .addComponent(lbl_diretor)
                 .addGap(18, 18, 18)
                 .addComponent(lbl_genero)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(lbl_descricao, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(lbl_info1)
-                        .addGap(18, 18, 18)
-                        .addComponent(lbl_2)
-                        .addGap(18, 18, 18)
-                        .addComponent(lbl_info3)
-                        .addGap(113, 113, 113)
-                        .addComponent(jButton1)))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(lbl_info1)
+                .addGap(18, 18, 18)
+                .addComponent(lbl_2)
+                .addGap(18, 18, 18)
+                .addComponent(lbl_info3)
+                .addGap(68, 68, 68)
+                .addComponent(jButton1)
+                .addContainerGap(84, Short.MAX_VALUE))
         );
 
         pack();
@@ -157,7 +140,6 @@ public class Video extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel lbl_2;
     private javax.swing.JLabel lbl_ano;
-    private javax.swing.JLabel lbl_descricao;
     private javax.swing.JLabel lbl_diretor;
     private javax.swing.JLabel lbl_genero;
     private javax.swing.JLabel lbl_info1;

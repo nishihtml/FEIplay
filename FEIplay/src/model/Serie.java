@@ -9,25 +9,26 @@ package model;
  * @author ncatjpeg
  */
 public class Serie extends Video implements Situacao{
-    private int episodios, temporadas;
+    private String episodios, temporadas, situacao;
 
-    public Serie(int episodios, int temporadas, String titulo, String descricao, String genero, String ano, String diretor) {
+    public Serie(String episodios, String temporadas, String titulo, String descricao, String genero, String ano, String diretor, String situacao) {
         super(titulo, descricao, genero, ano, diretor);
         this.episodios = episodios;
         this.temporadas = temporadas;
+        this.situacao = situacao;
     }
 
-    public int getEpisodios() {
+    public String getEpisodios() {
         return episodios;
     }
-    public void setEpisodios(int episodios) {
+    public void setEpisodios(String episodios) {
         this.episodios = episodios;
     }
 
-    public int getTemporadas() {
+    public String getTemporadas() {
         return temporadas;
     }
-    public void setTemporadas(int temporadas) {
+    public void setTemporadas(String temporadas) {
         this.temporadas = temporadas;
     }
 }
