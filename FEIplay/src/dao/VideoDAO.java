@@ -24,7 +24,7 @@ public class VideoDAO {
     }
     
     public ResultSet consultarFilme(Filme filme) throws SQLException{
-        String sql = "select * from usuarios where titulo = ? and tipo = ?";
+        String sql = "select * from videos where titulo = ? and tipo = ?";
         PreparedStatement statement = conn.prepareStatement(sql);
         statement.setString(1, filme.getTitulo());
         statement.setString(2, "1");
@@ -33,6 +33,15 @@ public class VideoDAO {
         return resultado;
     }
     
+    public ResultSet consultarSerie(Serie serie) throws SQLException{
+        String sql = "select * from videos where titulo = ? and tipo = ?";
+        PreparedStatement statement = conn.prepareStatement(sql);
+        statement.setString(1, serie.getTitulo());
+        statement.setString(2, "2");
+        statement.execute();
+        ResultSet resultado = statement.getResultSet();
+        return resultado;
+    }
 //    public void inserir(Usuario usuario) throws SQLException{
 //        String sql = "insert into usuarios (nome, usuario, senha) values ('"
 //                      + usuario.getNome()    + "', '" 
@@ -42,4 +51,8 @@ public class VideoDAO {
 //        statement.execute();
 //        conn.close();
 //    }
+
+    public ResultSet consultar(Filme filme) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

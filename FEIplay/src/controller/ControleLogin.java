@@ -4,7 +4,6 @@ import dao.UsuarioDAO;
 import dao.Conexao;
 import model.Usuario;
 import view.Login;
-//import view.Logado;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

@@ -11,8 +11,8 @@ package model;
 public class Filme extends Video{
     private String duracao;
 
-    public Filme(String duracao, String titulo, String descricao, String genero, String ano, String diretor) {
-        super(titulo, descricao, genero, ano, diretor);
+    public Filme(String duracao, String titulo, String genero, String ano, String diretor) {
+        super(titulo, genero, ano, diretor);
         this.duracao = duracao;
     }
 

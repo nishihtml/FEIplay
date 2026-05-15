@@ -8,12 +8,12 @@ package model;
  *
  * @author ncatjpeg
  */
-public class ListaReproducao{
+public class Playlist{
     private Usuario usuario;
     private Filme filme;
     private Serie serie;
 
-    public ListaReproducao(Usuario usuario, Filme filme, Serie serie) {
+    public Playlist(Usuario usuario, Filme filme, Serie serie) {
         this.usuario = usuario;
         this.filme = filme;
         this.serie = serie;

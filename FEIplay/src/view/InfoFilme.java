@@ -4,20 +4,76 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import model.Filme;
+
 /**
  *
  * @author ncatjpeg
  */
-public class InfoVideo extends javax.swing.JFrame {
-    
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(InfoVideo.class.getName());
-
+public class InfoFilme extends javax.swing.JFrame {
     /**
      * Creates new form Video
      */
-    public InfoVideo() {
+    public InfoFilme(Filme filme) {
         initComponents();
+        lbl_titulo.setText((filme.getTitulo()));
+        lbl_ano.setText((filme.getAno()));
+        lbl_diretor.setText((filme.getDiretor()));
+        lbl_genero.setText((filme.getGenero()));
+        lbl_duracao.setText((filme.getDuracao()));
     }
+
+    public JButton getjButton1() {
+        return btn_playlist;
+    }
+
+    public void setjButton1(JButton jButton1) {
+        this.btn_playlist = jButton1;
+    }
+
+    public JLabel getLbl_ano() {
+        return lbl_ano;
+    }
+
+    public void setLbl_ano(JLabel lbl_ano) {
+        this.lbl_ano = lbl_ano;
+    }
+
+    public JLabel getLbl_diretor() {
+        return lbl_diretor;
+    }
+
+    public void setLbl_diretor(JLabel lbl_diretor) {
+        this.lbl_diretor = lbl_diretor;
+    }
+
+    public JLabel getLbl_genero() {
+        return lbl_genero;
+    }
+
+    public void setLbl_genero(JLabel lbl_genero) {
+        this.lbl_genero = lbl_genero;
+    }
+
+    public JLabel getLbl_info1() {
+        return lbl_duracao;
+    }
+
+    public void setLbl_info1(JLabel lbl_info1) {
+        this.lbl_duracao = lbl_info1;
+    }
+
+    public JLabel getLbl_nome() {
+        return lbl_titulo;
+    }
+
+    public void setLbl_nome(JLabel lbl_nome) {
+        this.lbl_titulo = lbl_nome;
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,20 +84,19 @@ public class InfoVideo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl_nome = new javax.swing.JLabel();
+        lbl_titulo = new javax.swing.JLabel();
         lbl_ano = new javax.swing.JLabel();
         lbl_diretor = new javax.swing.JLabel();
         lbl_genero = new javax.swing.JLabel();
-        lbl_info1 = new javax.swing.JLabel();
-        lbl_2 = new javax.swing.JLabel();
-        lbl_info3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        lbl_duracao = new javax.swing.JLabel();
+        btn_playlist = new javax.swing.JButton();
+        btn_fechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Video");
+        setTitle("Filme");
 
-        lbl_nome.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        lbl_nome.setText("Nome: ");
+        lbl_titulo.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lbl_titulo.setText("Titulo: ");
 
         lbl_ano.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         lbl_ano.setText("Ano: ");
@@ -52,17 +107,14 @@ public class InfoVideo extends javax.swing.JFrame {
         lbl_genero.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         lbl_genero.setText("Gênero: ");
 
-        lbl_info1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        lbl_info1.setText("Info 1:");
+        lbl_duracao.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        lbl_duracao.setText("Duração:");
 
-        lbl_2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        lbl_2.setText("Info 2:");
+        btn_playlist.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
+        btn_playlist.setText("Playlist");
 
-        lbl_info3.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        lbl_info3.setText("Info 3:");
-
-        jButton1.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
-        jButton1.setText("Playlist");
+        btn_fechar.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
+        btn_fechar.setText("Fechar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -72,25 +124,24 @@ public class InfoVideo extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(45, 45, 45)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_info3, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(lbl_genero, javax.swing.GroupLayout.DEFAULT_SIZE, 767, Short.MAX_VALUE)
-                                .addComponent(lbl_diretor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lbl_ano, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lbl_nome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lbl_info1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lbl_2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lbl_genero, javax.swing.GroupLayout.DEFAULT_SIZE, 767, Short.MAX_VALUE)
+                            .addComponent(lbl_diretor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lbl_ano, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lbl_titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lbl_duracao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(348, 348, 348)
-                        .addComponent(jButton1)))
+                        .addGap(339, 339, 339)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btn_playlist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_fechar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(80, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(41, 41, 41)
-                .addComponent(lbl_nome)
+                .addComponent(lbl_titulo)
                 .addGap(18, 18, 18)
                 .addComponent(lbl_ano)
                 .addGap(18, 18, 18)
@@ -98,14 +149,12 @@ public class InfoVideo extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(lbl_genero)
                 .addGap(18, 18, 18)
-                .addComponent(lbl_info1)
+                .addComponent(lbl_duracao)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                .addComponent(btn_playlist)
                 .addGap(18, 18, 18)
-                .addComponent(lbl_2)
-                .addGap(18, 18, 18)
-                .addComponent(lbl_info3)
-                .addGap(68, 68, 68)
-                .addComponent(jButton1)
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addComponent(btn_fechar)
+                .addGap(30, 30, 30))
         );
 
         pack();
@@ -137,13 +186,12 @@ public class InfoVideo extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel lbl_2;
+    private javax.swing.JButton btn_fechar;
+    private javax.swing.JButton btn_playlist;
     private javax.swing.JLabel lbl_ano;
     private javax.swing.JLabel lbl_diretor;
+    private javax.swing.JLabel lbl_duracao;
     private javax.swing.JLabel lbl_genero;
-    private javax.swing.JLabel lbl_info1;
-    private javax.swing.JLabel lbl_info3;
-    private javax.swing.JLabel lbl_nome;
+    private javax.swing.JLabel lbl_titulo;
     // End of variables declaration//GEN-END:variables
 }

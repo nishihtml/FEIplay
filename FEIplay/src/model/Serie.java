@@ -11,8 +11,8 @@ package model;
 public class Serie extends Video implements Situacao{
     private String episodios, temporadas, situacao;
 
-    public Serie(String episodios, String temporadas, String titulo, String descricao, String genero, String ano, String diretor, String situacao) {
-        super(titulo, descricao, genero, ano, diretor);
+    public Serie(String episodios, String temporadas, String titulo, String genero, String ano, String diretor, String situacao) {
+        super(titulo, genero, ano, diretor);
         this.episodios = episodios;
         this.temporadas = temporadas;
         this.situacao = situacao;
@@ -31,4 +31,13 @@ public class Serie extends Video implements Situacao{
     public void setTemporadas(String temporadas) {
         this.temporadas = temporadas;
     }
+
+    public String getSituacao() {
+        return situacao;
+    }
+    public void setSituacao(String situacao) {
+        this.situacao = situacao;
+    }
+    
+    
 }
