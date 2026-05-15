@@ -24,10 +24,10 @@ Tabela videos:
 -ano
 -diretor
 -genero
--tipo                 //se tipo == “1”, é considerada como Filme; se tipo = “2”, é considerada como Serie
--duracao          // exclusivo para tipo 1
+-tipo            //se tipo == “1”, é considerada como Filme; se tipo = “2”, é considerada como Serie
+-duracao         // exclusivo para tipo 1
 -episodios       //exclusivo para tipo 2
--temporadas   //exclusivo para tipo 2
+-temporadas      //exclusivo para tipo 2
 -situacao        //exclusivo para tipo 2
 
 Eu inicialmente queria separar a tabela em dois mas não sabia como fazer isso ou utilizar a FOREIGN KEY no banco de dados, logo optei fazer com que a tabela videos compartilha os atributos da classe Filme e da classe Serie, tambem implementei o atributo tipo para diferencia entre Filme e Serie. A um certo ponto, eu queria implementar uma descricao para videos mas seria muito complicado para eu colocar todo texto em um só lugar. 
