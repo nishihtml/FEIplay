@@ -53,6 +53,9 @@ A interface Situação possui um método exibirSituação na qual ela é impleme
         }
     }
 
-OBS: Por algum motivo, quando uso o computador da FEI enquanto feito alguma alteração, os botões das janelas alteradas param de funcionar, possivelmente porque a o PC da minha casa usa a versão mais avançada do NetBeans do que da FEI. No momento em que estou escrevendo, os botões das janelas que exibem as informações dos vídeos são fora de funcionamento.
+
+OBS: 
+-Por algum motivo, quando uso o computador da FEI enquanto feito alguma alteração, os botões das janelas alteradas param de funcionar, possivelmente porque a o PC da minha casa usa a versão mais avançada do NetBeans do que da FEI. No momento em que estou escrevendo, os botões das janelas que exibem as informações dos vídeos são fora de funcionamento.
+-Em um certo ponto, eu recomeçei o meu projeto do zero pois eu tava usando aplicação Maven enquanto no ExemploBD usava Ant.
 
 GitHub: https://github.com/nishihtml/FEIplay 
