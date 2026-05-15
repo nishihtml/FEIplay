@@ -78,24 +78,24 @@ public class ControleIndex {
         
     }
     
-    public void criarPlaylist(){
-        Usuario user;
-        String n = tela4.getTxt_playlist().getText();
-        
-        Playlist playlist = new Playlist(n, null, null, null);
-        Conexao conexao = new Conexao();
-        try {
-            Connection conn = conexao.getConnection();
-            PlaylistDAO dao = new PlaylistDAO(conn);
-            dao.inserirPlaylist(playlist);
-            JOptionPane.showMessageDialog(tela4, "Playlist criado!","Aviso", 
-                                        JOptionPane.INFORMATION_MESSAGE);
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(tela4, "Playlist não foi criado!","Erro", 
-                                        JOptionPane.ERROR_MESSAGE);
-        }
-    }
-    
+//    public void criarPlaylist(){
+//        Usuario user;
+//        String n = tela4.getTxt_playlist().getText();
+//        
+//        Playlist playlist = new Playlist(n, null, null, null);
+//        Conexao conexao = new Conexao();
+//        try {
+//            Connection conn = conexao.getConnection();
+//            PlaylistDAO dao = new PlaylistDAO(conn);
+//            dao.inserirPlaylist(playlist);
+//            JOptionPane.showMessageDialog(tela4, "Playlist criado!","Aviso", 
+//                                        JOptionPane.INFORMATION_MESSAGE);
+//        } catch (SQLException ex) {
+//            JOptionPane.showMessageDialog(tela4, "Playlist não foi criado!","Erro", 
+//                                        JOptionPane.ERROR_MESSAGE);
+//        }
+//    }
+//    
 //        Aluno aluno = new Aluno(null,tela1.getTxtUsuario().getText(),tela1.getTxtSenha().getText());
 //        Conexao conexao = new Conexao();
 //        try{

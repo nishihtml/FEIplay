@@ -21,12 +21,7 @@ public class Playlist{
         this.serie = serie;
     }
 
-    public String getNome() {
-        return nome;
-    }
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    
 
     public Usuario getUsuario() {
         return usuario;

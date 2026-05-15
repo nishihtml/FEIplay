@@ -267,7 +267,7 @@ public class Index extends javax.swing.JFrame {
 
     private void btn_criarPlaylistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_criarPlaylistActionPerformed
         // TODO add your handling code here:
-        c.criarPlaylist();
+//        c.criarPlaylist();
         
     }//GEN-LAST:event_btn_criarPlaylistActionPerformed
 
